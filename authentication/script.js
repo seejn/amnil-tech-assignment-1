@@ -20,9 +20,11 @@ form.addEventListener("submit", (e) => {
     }
     else if(errorCount >= 3){
         alert("Please try again later");
+        return;
     }else if(username !== credentials.username || password !== credentials.password){
         errorCount++;
         alert("username or password is invalid");
+        return;
     }else{
         alert("login successful");
     }
